@@ -1,0 +1,331 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/bootstrap/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="/static/bootstrap/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/bootstrap/bootstrap.min.css">
+
+  <title>
+      ABF Funeral Service
+  </title>
+<style>
+  .holdingcontainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .internalcontainerL{
+    flex: 1;
+    background: white;
+    padding: 30px;
+  }
+  .internalcontainerM{
+    flex: 1;
+    background: white;
+    padding: 30px;
+  }
+  .internalcontainerR{
+    flex: 1;
+    background: white;
+    padding: 30px;
+  }
+  .checked{
+    color: orange;
+  }
+  
+</style>
+    <style>body>script+div[style^="text"]{display:none}html,body {overflow-x:hidden!important}</style>
+
+</head>
+<body>
+  
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+  
+
+  <!-- NAVBAR -->
+    <header class="site-navbar mt-3 " id="navbar" style="background-color: gray; height: 150px; top: -15px; width: 99vw;">
+      <div class="container-fluid" style="background-color: gray;">
+        <div class="row align-items-center" style="background-color: gray; margin-top: -13px; width: 100%;">
+          <div style="margin-top: 200px;" class="site-logo col-6"><img src="/static/images/logo.png" height="50px" style="color: white; margin-top: -50px;"></div>
+
+          <nav class="mx-auto site-navigation" style="background-color: gray; margin-top: -10px;">
+            <ul style="margin-top:150px;" class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+              <li><a  href="{% url 'home' %}" class="nav-link active"><b>Home</b></a></li>
+              <li class="has-children">
+                  <a  href="#"><b>About</b></a>
+                  <ul class="dropdown">
+                      <li><a href="{% url 'testimonies' %}">Testimonials</a></li>
+                  </ul>
+              </li>
+              <li><a href="{% url 'services' %}"><b>Services</b></a></li>
+              <li><a href="{% url 'gallery' %}"><b>Gallery</b></a></li>
+              <li><a href="blog.html"><b>Charges</b></a></li>
+              <li><a href="{% url 'contact' %}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+              </svg><b>Contact</b></a></li>
+              <li  class="d-lg-none"><a href="post-job.html"> Post a Job</a></li>
+              <li  class="d-lg-none"><a href="login.html">Log In</a></li>
+            </ul>
+          </nav>
+          
+          <div class="right-cta-menu text-right d-flex aligin-items-center col-6" style="background-color: gray; margin-top: -7px;">
+            <div class="ml-auto">
+              <a style="margin-top: 150px;" href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Post a Job</a>
+              <a style="margin-top: 150px;" href="login.html" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Log In</a>
+            </div>
+            <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+          </div>
+
+        </div>
+      </div>
+    </header>
+    {% block content %}
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="/static/images/img1.jpg" alt="First slide" height="600" style="opacity: 0.9; margin-top: 150px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="margin-top: -300px; font-size: 29px;"><b>WELCOME TO ABF FUNERAL SERVICE</b></h5>
+            <p style="font-size: 25px; color: white;"><b>Where your loved one goes from your family to ours</b></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="/static/images/img2.jpg" alt="Second slide" height="600" style="opacity: 1.0; margin-top: 150px;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="margin-top: -300px; font-size: 29px;"><b>WELCOME TO ABF FUNERAL SERVICE</b></h5>
+            <p style="font-size: 25px; color: white;"><b>Where your loved one goes from your family to ours</b></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="/static/images/img3.jpg" alt="Third slide" height="600" style="opacity: 1.0; margin-top: 150px; width: 100%;">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 style="margin-top: -300px; font-size: 29px;"><b>WELCOME TO ABF FUNERAL SERVICE</b></h5>
+            <p style="font-size: 25px; color: white;"><b>Where your loved one goes from your family to ours</b></p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <h1 style="text-align: center; margin-top: 50px;">ABF Funeral Service Difference</h1>
+    <div class="holdingcontainer">
+      
+      <div class="internalcontainerL"><h1 style="font-size: 20px;">Proffesional And Experienced</h1>
+        <img class="images" src="static/images/proffessional-amp-experienced-icon.png"/>
+        <p>
+        ABF Funeral Service is<br> owned and operated by Paul Grose,<br> who has more than 40 years industry experience<br>
+        and has built a reputation for providing personalised service, understanding and compassion.</p>
+      </div>
+      <div class="internalcontainerM"><h1 style="font-size: 20px;">Affordable</h1>
+        <img style="margin-top: 10px; margin-bottom: 20px;" class="images" src="static/images/credible-amp-transparent-prices-icon.png"/>
+        <p>
+        We are available 24 hours a day, 7 days a week, to help with all your service arrangements<br>
+        and specialise in providing memorial services for people from all walks of life.</p>
+      </div>
+      <div class="internalcontainerR"><h1 style="font-size: 20px;">Commpassionate And Caring</h1>
+        <img style="margin-top: 10px;" class="images" src="static/images/compassionate-exceptional-care-icon.png"/>
+        <p>
+        Our staff at ABF Funeral Services is dedicated to help people through this difficult time by handling all the details of the ceremony.<br>
+        Also care about creating a meaningful and memorable service for your family and loved one.</p>
+      </div>
+
+    </div>
+
+    <div class="box">
+      <img src="/static/images/iva-rajovic-EoRok66KZu0-unsplash.jpg" width="100%" height="600px" style="margin-top: 30px;">
+    </div>
+    <div class="stars" style="margin-top: -500px; margin-left: 600px;">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+    </div>
+    <div class="typing">
+      <h2 class="text-uppercase">Our funeral director was extremely compassionate</h2><br><br><br>
+      <h2>--Muhindo .R--</h2>
+    </div>
+
+    {% endblock content %}
+
+      <!-- Footer -->
+    <footer class="page-footer font-small mdb-color lighten-3 pt-4" style="background-color: rgb(210, 210, 210); margin-top: 225px;">
+
+      <!-- Footer Links -->
+      <div class="containers text-center text-md-left" style="margin-left: 20px;">
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1" >
+
+            <!-- Content -->
+            <h5 style="margin-top: 40px;" class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
+            <p>Here you can use rows and columns to organize your footer content.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident voluptate
+              esse
+              quasi, veritatis totam voluptas nostrum.</p>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+            <!-- Links -->
+            <h5 style="margin-top: 40px;" class="font-weight-bold text-uppercase mb-4">About</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <p>
+                  <a href="#!">HOME</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#!">ABOUT US</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#!">SERVICES</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="#!">CONTACT</a>
+                </p>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+            <!-- Contact details -->
+            <h5 style="margin-top: 40px;" class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <p>
+                  <i class="fas fa-home mr-3"></i> Kampala, Uganda</p>
+              </li>
+              <li>
+                <p>
+                  <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+              </li>
+              <li>
+                <p>
+                  <i class="fas fa-phone mr-3"></i> + 2567089768</p>
+              </li>
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none">
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+            <!-- Social buttons -->
+            <h5 style="margin-top: 40px;" class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+            <div class="social-links">
+              <a style="color: blue;" href="#"><i class="fab fa-facebook-f"></i></a>
+              <a style="color: purple;" href="#"><i class="fab fa-instagram"></i></a>
+              <a style="color: blue;" href="#"><i class="fab fa-twitter"></i></a>
+              <a style="color: green;" href="#"><i class="fab fa-whatsapp"></i></a>
+              <a style="color: blue;" href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright -->
+      <div style="margin-left: -800px;" class="footer-copyright text-center py-3">© 2022 Copyright:
+        <a href="#"> ABF Funeral Service</a>
+        <p style="margin-right: -1500px; padding-bottom: 0; color: black;">Designed by:© SamTech</p>
+      </div>
+      <!-- Copyright -->
+
+
+    </footer>
+<!-- Footer -->
+
+ 
+    
+
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
+
+    <script src="/https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="/https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="/https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/bootstrap/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.sticky.js"></script>
+    <script src="/static/js/main.js"></script>
+
+ 
+    
+</body>
+</html>
